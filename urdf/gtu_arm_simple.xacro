@@ -1,0 +1,252 @@
+<?xml version="1.0" ?>
+<robot name="gtu_arm_simple" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find gtu_arm_simple_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find gtu_arm_simple_description)/urdf/gtu_arm_simple.trans" />
+<xacro:include filename="$(find gtu_arm_simple_description)/urdf/gtu_arm_simple.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.0002980762285756305 -2.3434099167235534e-14 0.062032029672008965"/>
+    <mass value="4.6095708525443"/>
+    <inertia ixx="0.009798" ixy="1.7e-05" ixz="-2.3e-05" iyy="0.006363" iyz="0.0" izz="0.014537"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://gtu_arm_simple_description/meshes/base_link.stl"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://gtu_arm_simple_description/meshes/base_link.stl"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.00026664559304489155 0.04142853686705264 0.01398800228501125"/>
+    <mass value="5.696621742512526"/>
+    <inertia ixx="0.020531" ixy="-2e-05" ixz="-0.000102" iyy="0.025933" iyz="-0.001156" izz="0.04291"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.000456 0.0 -0.094999"/>
+    <geometry>
+      <mesh filename="package://gtu_arm_simple_description/meshes/link1_1.stl"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.000456 0.0 -0.094999"/>
+    <geometry>
+      <mesh filename="package://gtu_arm_simple_description/meshes/link1_1.stl"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link2_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.0011265793423361435 -0.010179751209976586 0.2445690931693241"/>
+    <mass value="6.303421578081501"/>
+    <inertia ixx="0.130072" ixy="-2.8e-05" ixz="0.000325" iyy="0.111856" iyz="0.024122" izz="0.038419"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.000999 -0.063999 -0.143997"/>
+    <geometry>
+      <mesh filename="package://gtu_arm_simple_description/meshes/link2_1.stl"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.000999 -0.063999 -0.143997"/>
+    <geometry>
+      <mesh filename="package://gtu_arm_simple_description/meshes/link2_1.stl"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link3_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.00023076822194436665 -0.0607138014809505 0.012742679114546629"/>
+    <mass value="2.404395336728058"/>
+    <inertia ixx="0.016491" ixy="7.1e-05" ixz="1.4e-05" iyy="0.004414" iyz="-0.002775" izz="0.016368"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.002436 0.079687 -0.586492"/>
+    <geometry>
+      <mesh filename="package://gtu_arm_simple_description/meshes/link3_1.stl"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.002436 0.079687 -0.586492"/>
+    <geometry>
+      <mesh filename="package://gtu_arm_simple_description/meshes/link3_1.stl"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link4_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.0003741376455528272 -0.0778739766529073 1.9851856895014564e-06"/>
+    <mass value="1.4724336727005185"/>
+    <inertia ixx="0.005177" ixy="1.6e-05" ixz="-4e-06" iyy="0.001869" iyz="0.0" izz="0.005924"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.001557 0.262685 -0.586496"/>
+    <geometry>
+      <mesh filename="package://gtu_arm_simple_description/meshes/link4_1.stl"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.001557 0.262685 -0.586496"/>
+    <geometry>
+      <mesh filename="package://gtu_arm_simple_description/meshes/link4_1.stl"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link5_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.01138398045945762 5.275851314823221e-05 -0.058028486550418146"/>
+    <mass value="2.2806063152886935"/>
+    <inertia ixx="0.011184" ixy="-1.3e-05" ixz="-0.001436" iyy="0.013878" iyz="-7e-06" izz="0.003968"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.000829 0.414183 -0.5865"/>
+    <geometry>
+      <mesh filename="package://gtu_arm_simple_description/meshes/link5_1.stl"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.000829 0.414183 -0.5865"/>
+    <geometry>
+      <mesh filename="package://gtu_arm_simple_description/meshes/link5_1.stl"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="hand_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-4.816417538270712e-05 0.0003203293157266751 -0.036693276746967096"/>
+    <mass value="0.5768724450250841"/>
+    <inertia ixx="0.000299" ixy="1e-06" ixz="-2e-06" iyy="0.000388" iyz="4e-06" izz="0.000157"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-4e-06 0.414184 -0.413002"/>
+    <geometry>
+      <mesh filename="package://gtu_arm_simple_description/meshes/hand_1.stl"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-4e-06 0.414184 -0.413002"/>
+    <geometry>
+      <mesh filename="package://gtu_arm_simple_description/meshes/hand_1.stl"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="finger_r_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.003343915161192321 0.0035196532707398864 -0.05984017452462531"/>
+    <mass value="0.38108965550166884"/>
+    <inertia ixx="0.000418" ixy="-0.0" ixz="-2.7e-05" iyy="0.00042" iyz="-0.0" izz="7.2e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.013687 0.417713 -0.352135"/>
+    <geometry>
+      <mesh filename="package://gtu_arm_simple_description/meshes/finger_r_1.stl"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.013687 0.417713 -0.352135"/>
+    <geometry>
+      <mesh filename="package://gtu_arm_simple_description/meshes/finger_r_1.stl"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="finger_l_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.0038752423274062003 0.0035783934758446545 -0.05953621179541729"/>
+    <mass value="0.3830052180747286"/>
+    <inertia ixx="0.000423" ixy="0.0" ixz="3e-05" iyy="0.000426" iyz="-0.0" izz="7.2e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.014313 0.417617 -0.35227"/>
+    <geometry>
+      <mesh filename="package://gtu_arm_simple_description/meshes/finger_l_1.stl"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.014313 0.417617 -0.35227"/>
+    <geometry>
+      <mesh filename="package://gtu_arm_simple_description/meshes/finger_l_1.stl"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Rev1" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.000456 0.0 0.094999"/>
+  <parent link="base_link"/>
+  <child link="link1_1"/>
+  <axis xyz="-0.004805 0.0 0.999988"/>
+</joint>
+
+<joint name="Rev2" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.000543 0.063999 0.048998"/>
+  <parent link="link1_1"/>
+  <child link="link2_1"/>
+  <axis xyz="-0.999977 -0.004802 -0.004805"/>
+</joint>
+
+<joint name="Rev3" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.001437 -0.143686 0.442495"/>
+  <parent link="link2_1"/>
+  <child link="link3_1"/>
+  <axis xyz="0.999977 0.004802 0.004805"/>
+</joint>
+
+<joint name="Rev4" type="continuous">
+  <origin rpy="0 0 0" xyz="0.000879 -0.182998 4e-06"/>
+  <parent link="link3_1"/>
+  <child link="link4_1"/>
+  <axis xyz="0.004802 -0.999988 2.2e-05"/>
+</joint>
+
+<joint name="Rev5" type="continuous">
+  <origin rpy="0 0 0" xyz="0.000728 -0.151498 4e-06"/>
+  <parent link="link4_1"/>
+  <child link="link5_1"/>
+  <axis xyz="0.999977 0.004802 0.004805"/>
+</joint>
+
+<joint name="Rev6" type="continuous">
+  <origin rpy="0 0 0" xyz="0.000833 -1e-06 -0.173498"/>
+  <parent link="link5_1"/>
+  <child link="hand_1"/>
+  <axis xyz="0.004805 -4e-06 -0.999988"/>
+</joint>
+
+<joint name="Rev7" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.013691 -0.003529 -0.060867"/>
+  <parent link="hand_1"/>
+  <child link="finger_r_1"/>
+  <axis xyz="0.004802 -0.999988 2.8e-05"/>
+</joint>
+
+<joint name="Rev8" type="continuous">
+  <origin rpy="0 0 0" xyz="0.014309 -0.003433 -0.060732"/>
+  <parent link="hand_1"/>
+  <child link="finger_l_1"/>
+  <axis xyz="0.004802 -0.999988 2.8e-05"/>
+</joint>
+
+</robot>

@@ -1,9 +1,9 @@
 <?xml version="1.0" ?>
-<robot name="gtu_arm_simple" xmlns:xacro="http://www.ros.org/wiki/xacro">
+<robot name="gtu_polar_arm" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-<xacro:include filename="$(find gtu_arm_simple_description)/urdf/materials.xacro" />
-<xacro:include filename="$(find gtu_arm_simple_description)/urdf/gtu_arm_simple.trans" />
-<xacro:include filename="$(find gtu_arm_simple_description)/urdf/gtu_arm_simple.gazebo" />
+<xacro:include filename="$(find gtu_polar_arm_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find gtu_polar_arm_description)/urdf/gtu_polar_arm.trans" />
+<xacro:include filename="$(find gtu_polar_arm_description)/urdf/gtu_polar_arm.gazebo" />
 <link name="base_link">
   <inertial>
     <origin rpy="0 0 0" xyz="-0.0003 -0.0 0.0620"/>
@@ -13,14 +13,14 @@
   <visual>
     <origin rpy="0 0 0" xyz="0 0 0"/>
     <geometry>
-      <mesh filename="package://gtu_arm_simple_description/meshes/base_link.stl"/>
+      <mesh filename="package://gtu_polar_arm_description/meshes/base_link.stl"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="0 0 0"/>
     <geometry>
-      <mesh filename="package://gtu_arm_simple_description/meshes/base_link.stl"/>
+      <mesh filename="package://gtu_polar_arm_description/meshes/base_link.stl"/>
     </geometry>
   </collision>
 </link>
@@ -34,14 +34,14 @@
   <visual>
     <origin rpy="0 0 0" xyz="0.0005 0.0 -0.095"/>
     <geometry>
-      <mesh filename="package://gtu_arm_simple_description/meshes/link1.stl"/>
+      <mesh filename="package://gtu_polar_arm_description/meshes/link1.stl"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="0.0005 0.0 -0.095"/>
     <geometry>
-      <mesh filename="package://gtu_arm_simple_description/meshes/link1.stl"/>
+      <mesh filename="package://gtu_polar_arm_description/meshes/link1.stl"/>
     </geometry>
   </collision>
 </link>
@@ -55,14 +55,14 @@
   <visual>
     <origin rpy="0 0 0" xyz="0.0001 -0.064 -0.144"/>
     <geometry>
-      <mesh filename="package://gtu_arm_simple_description/meshes/link2.stl"/>
+      <mesh filename="package://gtu_polar_arm_description/meshes/link2.stl"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="0.001 -0.064 -0.144"/>
     <geometry>
-      <mesh filename="package://gtu_arm_simple_description/meshes/link2.stl"/>
+      <mesh filename="package://gtu_polar_arm_description/meshes/link2.stl"/>
     </geometry>
   </collision>
 </link>
@@ -76,14 +76,14 @@
   <visual>
     <origin rpy="0 0 0" xyz="0.0024 0.0797 -0.5865"/>
     <geometry>
-      <mesh filename="package://gtu_arm_simple_description/meshes/link3.stl"/>
+      <mesh filename="package://gtu_polar_arm_description/meshes/link3.stl"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="0.0024 0.0797 -0.5865"/>
     <geometry>
-      <mesh filename="package://gtu_arm_simple_description/meshes/link3.stl"/>
+      <mesh filename="package://gtu_polar_arm_description/meshes/link3.stl"/>
     </geometry>
   </collision>
 </link>
@@ -97,14 +97,14 @@
   <visual>
     <origin rpy="0 0 0" xyz="0.0016 0.2627 -0.5865"/>
     <geometry>
-      <mesh filename="package://gtu_arm_simple_description/meshes/link4.stl"/>
+      <mesh filename="package://gtu_polar_arm_description/meshes/link4.stl"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="0.0016 0.2627 -0.5865"/>
     <geometry>
-      <mesh filename="package://gtu_arm_simple_description/meshes/link4.stl"/>
+      <mesh filename="package://gtu_polar_arm_description/meshes/link4.stl"/>
     </geometry>
   </collision>
 </link>
@@ -118,14 +118,14 @@
   <visual>
     <origin rpy="0 0 0" xyz="0.0008 0.4142 -0.5865"/>
     <geometry>
-      <mesh filename="package://gtu_arm_simple_description/meshes/link5.stl"/>
+      <mesh filename="package://gtu_polar_arm_description/meshes/link5.stl"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="0.0008 0.4142 -0.5865"/>
     <geometry>
-      <mesh filename="package://gtu_arm_simple_description/meshes/link5.stl"/>
+      <mesh filename="package://gtu_polar_arm_description/meshes/link5.stl"/>
     </geometry>
   </collision>
 </link>
@@ -139,14 +139,14 @@
   <visual>
     <origin rpy="0 0 0" xyz="0.0 0.4142 -0.413"/>
     <geometry>
-      <mesh filename="package://gtu_arm_simple_description/meshes/hand.stl"/>
+      <mesh filename="package://gtu_polar_arm_description/meshes/hand.stl"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="0.0 0.4142 -0.413"/>
     <geometry>
-      <mesh filename="package://gtu_arm_simple_description/meshes/hand.stl"/>
+      <mesh filename="package://gtu_polar_arm_description/meshes/hand.stl"/>
     </geometry>
   </collision>
 </link>
@@ -160,14 +160,14 @@
   <visual>
     <origin rpy="0 0 0" xyz="0.0137 0.4177 -0.3521"/>
     <geometry>
-      <mesh filename="package://gtu_arm_simple_description/meshes/finger_r.stl"/>
+      <mesh filename="package://gtu_polar_arm_description/meshes/finger_r.stl"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="0.0137 0.4177 -0.3521"/>
     <geometry>
-      <mesh filename="package://gtu_arm_simple_description/meshes/finger_r.stl"/>
+      <mesh filename="package://gtu_polar_arm_description/meshes/finger_r.stl"/>
     </geometry>
   </collision>
 </link>
@@ -181,14 +181,14 @@
   <visual>
     <origin rpy="0 0 0" xyz="-0.0143 0.4176 -0.3523"/>
     <geometry>
-      <mesh filename="package://gtu_arm_simple_description/meshes/finger_l.stl"/>
+      <mesh filename="package://gtu_polar_arm_description/meshes/finger_l.stl"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="-0.0143 0.4176 -0.3522"/>
     <geometry>
-      <mesh filename="package://gtu_arm_simple_description/meshes/finger_l.stl"/>
+      <mesh filename="package://gtu_polar_arm_description/meshes/finger_l.stl"/>
     </geometry>
   </collision>
 </link>

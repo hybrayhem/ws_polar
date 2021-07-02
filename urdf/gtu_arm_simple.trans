@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<robot name="gtu_arm_simple" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+<robot name="gtu_polar_arm" xmlns:xacro="http://www.ros.org/wiki/xacro" >
 
 <transmission name="Rev1_tran">
   <type>transmission_interface/SimpleTransmission</type>

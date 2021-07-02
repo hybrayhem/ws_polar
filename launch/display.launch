@@ -1,7 +1,7 @@
 <launch>
-  <arg default="$(find gtu_arm_simple_description)/urdf/gtu_arm_simple.xacro" name="model"/>
+  <arg default="$(find gtu_polar_arm_description)/urdf/gtu_polar_arm.xacro" name="model"/>
   <arg default="true" name="gui"/>
-  <arg default="$(find gtu_arm_simple_description)/launch/urdf.rviz" name="rvizconfig"/>
+  <arg default="$(find gtu_polar_arm_description)/launch/urdf.rviz" name="rvizconfig"/>
   <param command="$(find xacro)/xacro $(arg model)" name="robot_description"/>
   <param name="use_gui" value="$(arg gui)"/>
   <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher"/>

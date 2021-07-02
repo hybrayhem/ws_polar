@@ -1,4 +1,4 @@
-gtu_arm_simple_controller:
+gtu_polar_arm_controller:
   # Publish all joint states -----------------------------------
   joint_state_controller:
     type: joint_state_controller/JointStateController

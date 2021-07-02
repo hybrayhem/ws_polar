@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>gtu_arm_simple_description</name>
+  <name>gtu_polar_arm_description</name>
   <version>0.0.0</version>
-<description>The gtu_arm_simple_description package</description>
+<description>The gtu_polar_arm_description package</description>
 
   <!-- One maintainer tag required, multiple allowed, one person per tag -->
   <!-- Example:  -->

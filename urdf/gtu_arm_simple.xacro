@@ -25,7 +25,7 @@
   </collision>
 </link>
 
-<link name="link1_1">
+<link name="link1">
   <inertial>
     <origin rpy="0 0 0" xyz="-0.0003 0.0414 0.0140"/>
     <mass value="5.6966"/>
@@ -34,19 +34,19 @@
   <visual>
     <origin rpy="0 0 0" xyz="0.0005 0.0 -0.095"/>
     <geometry>
-      <mesh filename="package://gtu_arm_simple_description/meshes/link1_1.stl"/>
+      <mesh filename="package://gtu_arm_simple_description/meshes/link1.stl"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="0.0005 0.0 -0.095"/>
     <geometry>
-      <mesh filename="package://gtu_arm_simple_description/meshes/link1_1.stl"/>
+      <mesh filename="package://gtu_arm_simple_description/meshes/link1.stl"/>
     </geometry>
   </collision>
 </link>
 
-<link name="link2_1">
+<link name="link2">
   <inertial>
     <origin rpy="0 0 0" xyz="-0.0011 -0.0102 0.2446"/>
     <mass value="6.3034"/>
@@ -55,19 +55,19 @@
   <visual>
     <origin rpy="0 0 0" xyz="0.0001 -0.064 -0.144"/>
     <geometry>
-      <mesh filename="package://gtu_arm_simple_description/meshes/link2_1.stl"/>
+      <mesh filename="package://gtu_arm_simple_description/meshes/link2.stl"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="0.001 -0.064 -0.144"/>
     <geometry>
-      <mesh filename="package://gtu_arm_simple_description/meshes/link2_1.stl"/>
+      <mesh filename="package://gtu_arm_simple_description/meshes/link2.stl"/>
     </geometry>
   </collision>
 </link>
 
-<link name="link3_1">
+<link name="link3">
   <inertial>
     <origin rpy="0 0 0" xyz="0.0002 -0.0607 0.0127"/>
     <mass value="2.4044"/>
@@ -76,19 +76,19 @@
   <visual>
     <origin rpy="0 0 0" xyz="0.0024 0.0797 -0.5865"/>
     <geometry>
-      <mesh filename="package://gtu_arm_simple_description/meshes/link3_1.stl"/>
+      <mesh filename="package://gtu_arm_simple_description/meshes/link3.stl"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="0.0024 0.0797 -0.5865"/>
     <geometry>
-      <mesh filename="package://gtu_arm_simple_description/meshes/link3_1.stl"/>
+      <mesh filename="package://gtu_arm_simple_description/meshes/link3.stl"/>
     </geometry>
   </collision>
 </link>
 
-<link name="link4_1">
+<link name="link4">
   <inertial>
     <origin rpy="0 0 0" xyz="0.0004 -0.0779 0.0"/>
     <mass value="1.4724"/>
@@ -97,19 +97,19 @@
   <visual>
     <origin rpy="0 0 0" xyz="0.0016 0.2627 -0.5865"/>
     <geometry>
-      <mesh filename="package://gtu_arm_simple_description/meshes/link4_1.stl"/>
+      <mesh filename="package://gtu_arm_simple_description/meshes/link4.stl"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="0.0016 0.2627 -0.5865"/>
     <geometry>
-      <mesh filename="package://gtu_arm_simple_description/meshes/link4_1.stl"/>
+      <mesh filename="package://gtu_arm_simple_description/meshes/link4.stl"/>
     </geometry>
   </collision>
 </link>
 
-<link name="link5_1">
+<link name="link5">
   <inertial>
     <origin rpy="0 0 0" xyz="0.0114 0.0 -0.058"/>
     <mass value="2.2806"/>
@@ -118,19 +118,19 @@
   <visual>
     <origin rpy="0 0 0" xyz="0.0008 0.4142 -0.5865"/>
     <geometry>
-      <mesh filename="package://gtu_arm_simple_description/meshes/link5_1.stl"/>
+      <mesh filename="package://gtu_arm_simple_description/meshes/link5.stl"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="0.0008 0.4142 -0.5865"/>
     <geometry>
-      <mesh filename="package://gtu_arm_simple_description/meshes/link5_1.stl"/>
+      <mesh filename="package://gtu_arm_simple_description/meshes/link5.stl"/>
     </geometry>
   </collision>
 </link>
 
-<link name="hand_1">
+<link name="hand">
   <inertial>
     <origin rpy="0 0 0" xyz="0.0 0.0003 -0.0367"/>
     <mass value="0.5769"/>
@@ -139,19 +139,19 @@
   <visual>
     <origin rpy="0 0 0" xyz="0.0 0.4142 -0.413"/>
     <geometry>
-      <mesh filename="package://gtu_arm_simple_description/meshes/hand_1.stl"/>
+      <mesh filename="package://gtu_arm_simple_description/meshes/hand.stl"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="0.0 0.4142 -0.413"/>
     <geometry>
-      <mesh filename="package://gtu_arm_simple_description/meshes/hand_1.stl"/>
+      <mesh filename="package://gtu_arm_simple_description/meshes/hand.stl"/>
     </geometry>
   </collision>
 </link>
 
-<link name="finger_r_1">
+<link name="finger_r">
   <inertial>
     <origin rpy="0 0 0" xyz="-0.0033 0.0035 -0.0598"/>
     <mass value="0.3811"/>
@@ -160,19 +160,19 @@
   <visual>
     <origin rpy="0 0 0" xyz="0.0137 0.4177 -0.3521"/>
     <geometry>
-      <mesh filename="package://gtu_arm_simple_description/meshes/finger_r_1.stl"/>
+      <mesh filename="package://gtu_arm_simple_description/meshes/finger_r.stl"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="0.0137 0.4177 -0.3521"/>
     <geometry>
-      <mesh filename="package://gtu_arm_simple_description/meshes/finger_r_1.stl"/>
+      <mesh filename="package://gtu_arm_simple_description/meshes/finger_r.stl"/>
     </geometry>
   </collision>
 </link>
 
-<link name="finger_l_1">
+<link name="finger_l">
   <inertial>
     <origin rpy="0 0 0" xyz="0.0039 0.0036 -0.0595"/>
     <mass value="0.383"/>
@@ -181,14 +181,14 @@
   <visual>
     <origin rpy="0 0 0" xyz="-0.0143 0.4176 -0.3523"/>
     <geometry>
-      <mesh filename="package://gtu_arm_simple_description/meshes/finger_l_1.stl"/>
+      <mesh filename="package://gtu_arm_simple_description/meshes/finger_l.stl"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="-0.0143 0.4176 -0.3522"/>
     <geometry>
-      <mesh filename="package://gtu_arm_simple_description/meshes/finger_l_1.stl"/>
+      <mesh filename="package://gtu_arm_simple_description/meshes/finger_l.stl"/>
     </geometry>
   </collision>
 </link>
@@ -196,56 +196,56 @@
 <joint name="Rev1" type="continuous">
   <origin rpy="0 0 0" xyz="-0.0005 0.0 0.095"/>
   <parent link="base_link"/>
-  <child link="link1_1"/>
+  <child link="link1"/>
   <axis xyz="-0.0048 0.0 1.0"/>
 </joint>
 
 <joint name="Rev2" type="continuous">
   <origin rpy="0 0 0" xyz="-0.0005 0.064 0.049"/>
-  <parent link="link1_1"/>
-  <child link="link2_1"/>
+  <parent link="link1"/>
+  <child link="link2"/>
   <axis xyz="-1.0 -0.0048 -0.0048"/>
 </joint>
 
 <joint name="Rev3" type="continuous">
   <origin rpy="0 0 0" xyz="-0.0014 -0.1437 0.4425"/>
-  <parent link="link2_1"/>
-  <child link="link3_1"/>
+  <parent link="link2"/>
+  <child link="link3"/>
   <axis xyz="1.0 0.0048 0.0048"/>
 </joint>
 
 <joint name="Rev4" type="continuous">
   <origin rpy="0 0 0" xyz="0.0009 -0.1830 0.0"/>
-  <parent link="link3_1"/>
-  <child link="link4_1"/>
+  <parent link="link3"/>
+  <child link="link4"/>
   <axis xyz="0.0048 -1.0 0.0"/>
 </joint>
 
 <joint name="Rev5" type="continuous">
   <origin rpy="0 0 0" xyz="0.0007 -0.1515 0.0"/>
-  <parent link="link4_1"/>
-  <child link="link5_1"/>
+  <parent link="link4"/>
+  <child link="link5"/>
   <axis xyz="1.0 0.0048 0.0048"/>
 </joint>
 
 <joint name="Rev6" type="continuous">
   <origin rpy="0 0 0" xyz="0.0008 -0.0 -0.1735"/>
-  <parent link="link5_1"/>
-  <child link="hand_1"/>
+  <parent link="link5"/>
+  <child link="hand"/>
   <axis xyz="0.0048 -0.0 -1.0"/>
 </joint>
 
 <joint name="Rev7" type="continuous">
   <origin rpy="0 0 0" xyz="-0.0137 -0.0035 -0.0609"/>
-  <parent link="hand_1"/>
-  <child link="finger_r_1"/>
+  <parent link="hand"/>
+  <child link="finger_r"/>
   <axis xyz="0.0048 -1.0 0.0"/>
 </joint>
 
 <joint name="Rev8" type="continuous">
   <origin rpy="0 0 0" xyz="0.0143 -0.0034 -0.0607"/>
-  <parent link="hand_1"/>
-  <child link="finger_l_1"/>
+  <parent link="hand"/>
+  <child link="finger_l"/>
   <axis xyz="0.0048 -1.0 0.0"/>
 </joint>
 

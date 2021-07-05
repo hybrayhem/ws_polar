@@ -134,5 +134,27 @@
       <axis xyz="1.0 0.0048 0.0048"/>
       <limit effort="12" lower="-2.8973" upper="2.8973" velocity="2.6100"/>
     </joint>
+    <link name="${arm_id}_link6">
+      <visual>
+        <origin rpy="0 0 0" xyz="0.0 0.4142 -0.4235"/>
+        <geometry>
+          <mesh filename="package://${description_pkg}/meshes/link6.dae"/>
+        </geometry>
+      </visual>
+      <collision>
+        <origin rpy="0 0 0" xyz="0.0 0.4142 -0.4235"/>
+        <geometry>
+          <mesh filename="package://${description_pkg}/meshes/link6.dae"/>
+        </geometry>
+      </collision>
+    </link>
+    <joint name="${arm_id}_joint6" type="revolute">
+      <safety_controller k_position="100.0" k_velocity="40.0" soft_lower_limit="-2.8973" soft_upper_limit="2.8973"/>
+      <origin rpy="0 0 0" xyz="0.0008 -0.0 -0.1630"/>
+      <parent link="${arm_id}_link5"/>
+      <child link="${arm_id}_link6"/>
+      <axis xyz="0.0048 -0.0 -1.0"/>
+      <limit effort="12" lower="-2.8973" upper="2.8973" velocity="2.6100"/>
+    </joint>
   </xacro:macro>
 </robot>

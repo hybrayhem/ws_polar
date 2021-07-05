@@ -3,5 +3,6 @@
   <xacro:include filename="$(find gtu_polar_arm_description)/robots/gtu_polar_arm.xacro"/>
   <xacro:include filename="$(find gtu_polar_arm_description)/robots/hand.xacro"/>
   <xacro:gtu_polar_arm/>
-  <xacro:hand ns="gtu_polar" connected_to="gtu_polar_link5"/>
+  <!-- <xacro:hand ns="gtu_polar" rpy="0 0 0" xyz="0.0008 -0.0 -0.1735" connected_to="gtu_polar_link5"/> -->
+  <xacro:hand ns="gtu_polar" rpy="${pi/2} 0 0" xyz="-0.00675 -0.00964 -0.06152" connected_to="gtu_polar_link6"/>
 </robot>

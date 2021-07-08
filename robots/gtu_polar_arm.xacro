@@ -36,6 +36,11 @@
           <mesh filename="package://${description_pkg}/meshes/link0.dae"/>
         </geometry>
       </collision>
+      <inertial>
+        <origin rpy="0 0 0" xyz="-0.0003 -0.0 0.0620"/>
+        <mass value="4.6095708525443"/>
+        <inertia ixx="0.009798" ixy="1.7e-05" ixz="-2.3e-05" iyy="0.006363" iyz="0.0" izz="0.014537"/>
+      </inertial>
     </link>
 
     <link name="${arm_id}_link1">
@@ -51,6 +56,11 @@
           <mesh filename="package://${description_pkg}/meshes/link1.dae"/>
         </geometry>
       </collision>
+      <inertial>
+        <origin rpy="0 0 0" xyz="-0.00026664559304489155 0.04142853686705264 0.01398800228501125"/>
+        <mass value="5.696621742512526"/>
+        <inertia ixx="0.020531" ixy="-2e-05" ixz="-0.000102" iyy="0.025933" iyz="-0.001156" izz="0.04291"/>
+      </inertial>
     </link>
     <joint name="${arm_id}_joint1" type="revolute">
       <safety_controller k_position="${safety_k_position}" k_velocity="${safety_k_velocity}" soft_lower_limit="${-1.2*pi}" soft_upper_limit="${1.2*pi}"/>
@@ -75,6 +85,11 @@
           <mesh filename="package://${description_pkg}/meshes/link2.dae"/>
         </geometry>
       </collision>
+      <inertial>
+        <origin rpy="0 0 0" xyz="-0.0011265793423361435 -0.010179751209976586 0.2445690931693241"/>
+        <mass value="6.303421578081501"/>
+        <inertia ixx="0.130072" ixy="-2.8e-05" ixz="0.000325" iyy="0.111856" iyz="0.024122" izz="0.038419"/>
+      </inertial>
     </link>
     <joint name="${arm_id}_joint2" type="revolute">
       <safety_controller k_position="${safety_k_position}" k_velocity="${safety_k_velocity}" soft_lower_limit="-0.96" soft_upper_limit="0.35"/>
@@ -99,6 +114,11 @@
           <mesh filename="package://${description_pkg}/meshes/link3.dae"/>
         </geometry>
       </collision>
+      <inertial>
+        <origin rpy="0 0 0" xyz="0.00023076822194436665 -0.0607138014809505 0.012742679114546629"/>
+        <mass value="2.404395336728058"/>
+        <inertia ixx="0.016491" ixy="7.1e-05" ixz="1.4e-05" iyy="0.004414" iyz="-0.002775" izz="0.016368"/>
+      </inertial>
     </link>
     <joint name="${arm_id}_joint3" type="revolute">
       <safety_controller k_position="${safety_k_position}" k_velocity="${safety_k_velocity}" soft_lower_limit="-0.26" soft_upper_limit="0.87"/>
@@ -123,6 +143,11 @@
           <mesh filename="package://${description_pkg}/meshes/link4.dae"/>
         </geometry>
       </collision>
+      <inertial>
+        <origin rpy="0 0 0" xyz="0.0003741376455528272 -0.0778739766529073 1.9851856895014564e-06"/>
+        <mass value="1.4724336727005185"/>
+        <inertia ixx="0.005177" ixy="1.6e-05" ixz="-4e-06" iyy="0.001869" iyz="0.0" izz="0.005924"/>
+      </inertial>
     </link>
     <joint name="${arm_id}_joint4" type="revolute">
       <safety_controller k_position="${safety_k_position}" k_velocity="${safety_k_velocity}" soft_lower_limit="${-pi}" soft_upper_limit="${pi}"/>
@@ -147,6 +172,11 @@
           <mesh filename="package://${description_pkg}/meshes/link5.dae"/>
         </geometry>
       </collision>
+      <inertial>
+        <origin rpy="0 0 0" xyz="0.011505440232523104 5.3376606865773724e-05 -0.056762648886386935"/>
+        <mass value="2.254711737840762"/>
+        <inertia ixx="0.010865" ixy="-1.3e-05" ixz="-0.001406" iyy="0.013556" iyz="-7e-06" izz="0.003964"/>
+      </inertial>
     </link>
     <joint name="${arm_id}_joint5" type="revolute">
       <safety_controller k_position="${safety_k_position}" k_velocity="${safety_k_velocity}" soft_lower_limit="${-pi}" soft_upper_limit="0.96"/>
@@ -171,6 +201,11 @@
           <mesh filename="package://${description_pkg}/meshes/link6.dae"/>
         </geometry>
       </collision>
+      <inertial>
+        <origin rpy="0 0 0" xyz="2.4665038927900798e-05 -6.015326359243289e-08 -0.005150438004958846"/>
+        <mass value="0.02540134740060902"/>
+        <inertia ixx="1e-06" ixy="-0.0" ixz="-0.0" iyy="1e-06" iyz="0.0" izz="1e-06"/>
+      </inertial>
     </link>
     <joint name="${arm_id}_joint6" type="revolute">
       <safety_controller k_position="${safety_k_position}" k_velocity="${safety_k_velocity}" soft_lower_limit="${-pi}" soft_upper_limit="${pi}"/>

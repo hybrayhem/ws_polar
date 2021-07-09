@@ -29,26 +29,6 @@
       </inertial>
     </link>
 
-    <link name="${ns}_outer_r">
-      <visual>
-        <origin rpy="0 0 0" xyz="0.011889 0.027594 0.004951"/>
-        <geometry>
-          <mesh filename="package://gtu_polar_arm_description/meshes/gripper/outer_r.dae"/>
-        </geometry>
-      </visual>
-      <collision>
-        <origin rpy="0 0 0" xyz="0.011889 0.027594 0.004951"/>
-        <geometry>
-          <mesh filename="package://gtu_polar_arm_description/meshes/gripper/outer_r.dae"/>
-        </geometry>
-      </collision>
-      <inertial>
-        <origin rpy="0 0 0" xyz="-0.007134 -0.006305 -0.004655"/>
-        <mass value="0.0868"/>
-        <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="-0.0" izz="0.0"/>
-      </inertial>
-    </link>
-
     <link name="${ns}_outer_l">
       <visual>
         <origin rpy="0 0 0" xyz="-0.025351 0.027594 0.004951"/>
@@ -66,6 +46,26 @@
         <origin rpy="0 0 0" xyz="0.006975 -0.006230 -0.004655"/>
         <mass value="0.0877"/>
         <inertia ixx="0.0" ixy="0.0" ixz="-0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+      </inertial>
+    </link>
+
+    <link name="${ns}_outer_r">
+      <visual>
+        <origin rpy="0 0 0" xyz="0.011889 0.027594 0.004951"/>
+        <geometry>
+          <mesh filename="package://gtu_polar_arm_description/meshes/gripper/outer_r.dae"/>
+        </geometry>
+      </visual>
+      <collision>
+        <origin rpy="0 0 0" xyz="0.011889 0.027594 0.004951"/>
+        <geometry>
+          <mesh filename="package://gtu_polar_arm_description/meshes/gripper/outer_r.dae"/>
+        </geometry>
+      </collision>
+      <inertial>
+        <origin rpy="0 0 0" xyz="-0.007134 -0.006305 -0.004655"/>
+        <mass value="0.0868"/>
+        <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="-0.0" izz="0.0"/>
       </inertial>
     </link>
 

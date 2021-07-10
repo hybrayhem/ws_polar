@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: polar_description
+    relative_path: robots/polar_arm_hand.urdf.xacro
+    xacro_args: ""
+  SRDF:
+    relative_path: config/polar.srdf
+  CONFIG:
+    author_name: hybrayhem
+    author_email: hybrayhem@gmail.com
+    generated_timestamp: 1625928184

@@ -1,0 +1,15 @@
+controller_list:
+  - name: fake_polar_arm_controller
+    joints:
+      - polar_joint1
+      - polar_joint2
+      - polar_joint3
+      - polar_joint4
+      - polar_joint5
+      - polar_joint6
+  - name: fake_hand_controller
+    joints:
+      - polar_hand_joint1
+initial:  # Define initial robot poses.
+  - group: polar_arm
+    pose: home

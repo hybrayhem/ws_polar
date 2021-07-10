@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="polar">
+  <xacro:arg name="robot_name" default="polar"/>
+
+  <xacro:include filename="$(find polar_description)/robots/polar_arm.xacro"/>
+  <xacro:include filename="$(find polar_description)/robots/hand.xacro"/>
+  <xacro:include filename="$(find polar_description)/robots/polar.gazebo.xacro"/>
+  <xacro:include filename="$(find polar_description)/robots/polar.transmission.xacro"/>
+
+  <xacro:polar_arm/>
+  <xacro:hand ns="polar" rpy="${pi/2} 0 0" xyz="-0.00675 -0.00964 -0.06152" connected_to="polar_link6"/>
+
+  <xacro:polar_gazebo robot_name="$(arg robot_name)" />
+  <xacro:polar_transmission robot_name="$(arg robot_name)" />
+</robot>

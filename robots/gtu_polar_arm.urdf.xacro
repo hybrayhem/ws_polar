@@ -1,5 +1,0 @@
-<?xml version='1.0' encoding='utf-8'?>
-<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="gtu_polar">
-  <xacro:include filename="$(find gtu_polar_arm_description)/robots/gtu_polar_arm.xacro" />
-  <xacro:polar_arm/>
-</robot>

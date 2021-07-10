@@ -13,13 +13,13 @@
       <visual>
         <origin rpy="0 0 0" xyz="0 0 0"/>
         <geometry>
-          <mesh filename="package://gtu_polar_arm_description/meshes/gripper/hand.dae"/>
+          <mesh filename="package://polar_description/meshes/gripper/hand.dae"/>
         </geometry>
       </visual>
       <collision>
         <origin rpy="0 0 0" xyz="0 0 0"/>
         <geometry>
-          <mesh filename="package://gtu_polar_arm_description/meshes/gripper/hand.dae"/>
+          <mesh filename="package://polar_description/meshes/gripper/hand.dae"/>
         </geometry>
       </collision>
       <inertial>
@@ -33,13 +33,13 @@
       <visual>
         <origin rpy="0 0 0" xyz="-0.025351 0.027594 0.004951"/>
         <geometry>
-          <mesh filename="package://gtu_polar_arm_description/meshes/gripper/outer_l.dae"/>
+          <mesh filename="package://polar_description/meshes/gripper/outer_l.dae"/>
         </geometry>
       </visual>
       <collision>
         <origin rpy="0 0 0" xyz="-0.025351 0.027594 0.004951"/>
         <geometry>
-          <mesh filename="package://gtu_polar_arm_description/meshes/gripper/outer_l.dae"/>
+          <mesh filename="package://polar_description/meshes/gripper/outer_l.dae"/>
         </geometry>
       </collision>
       <inertial>
@@ -53,13 +53,13 @@
       <visual>
         <origin rpy="0 0 0" xyz="0.011889 0.027594 0.004951"/>
         <geometry>
-          <mesh filename="package://gtu_polar_arm_description/meshes/gripper/outer_r.dae"/>
+          <mesh filename="package://polar_description/meshes/gripper/outer_r.dae"/>
         </geometry>
       </visual>
       <collision>
         <origin rpy="0 0 0" xyz="0.011889 0.027594 0.004951"/>
         <geometry>
-          <mesh filename="package://gtu_polar_arm_description/meshes/gripper/outer_r.dae"/>
+          <mesh filename="package://polar_description/meshes/gripper/outer_r.dae"/>
         </geometry>
       </collision>
       <inertial>
@@ -73,13 +73,13 @@
       <visual>
         <origin rpy="0 0 0" xyz="-0.061266 0.066842 0.004951"/>
         <geometry>
-          <mesh filename="package://gtu_polar_arm_description/meshes/gripper/finger_l.dae"/>
+          <mesh filename="package://polar_description/meshes/gripper/finger_l.dae"/>
         </geometry>
       </visual>
       <collision>
         <origin rpy="0 0 0" xyz="-0.061266 0.066842 0.004951"/>
         <geometry>
-          <mesh filename="package://gtu_polar_arm_description/meshes/gripper/finger_l.dae"/>
+          <mesh filename="package://polar_description/meshes/gripper/finger_l.dae"/>
         </geometry>
       </collision>
       <inertial>
@@ -93,13 +93,13 @@
       <visual>
         <origin rpy="0 0 0" xyz="0.047804 0.066842 0.004951"/>
         <geometry>
-          <mesh filename="package://gtu_polar_arm_description/meshes/gripper/finger_r.dae"/>
+          <mesh filename="package://polar_description/meshes/gripper/finger_r.dae"/>
         </geometry>
       </visual>
       <collision>
         <origin rpy="0 0 0" xyz="0.047804 0.066842 0.004951"/>
         <geometry>
-          <mesh filename="package://gtu_polar_arm_description/meshes/gripper/finger_r.dae"/>
+          <mesh filename="package://polar_description/meshes/gripper/finger_r.dae"/>
         </geometry>
       </collision>
       <inertial>

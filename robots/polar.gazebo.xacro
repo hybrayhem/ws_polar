@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-    <xacro:macro name="gtu_polar_gazebo" params="robot_name">
+    <xacro:macro name="polar_gazebo" params="robot_name">
 
         <!-- Link0 -->
         <gazebo reference="${robot_name}_link0">

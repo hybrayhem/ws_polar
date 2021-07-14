@@ -1,0 +1,39 @@
+#polar:                    
+    #useful if you use a namespace for the robot
+    # Publish joint states
+    joint_state_controller:
+        type: joint_state_controller/JointStateController
+        publish_rate: 50
+
+    polar_arm_controller:
+        type: effort_controllers/JointTrajectoryController
+        joints:
+            - polar_joint1
+            - polar_joint2
+            - polar_joint3
+            - polar_joint4
+            - polar_joint5
+            - polar_joint6
+
+        gains:
+            polar_joint1: { p: 12000, d: 50, i: 0.0, i_clamp: 10000 }
+            polar_joint2: { p: 30000, d: 100, i: 0.02, i_clamp: 10000 }
+            polar_joint3: { p: 18000, d: 50, i: 0.01, i_clamp: 1 }
+            polar_joint4: { p: 18000, d: 70, i: 0.01, i_clamp: 10000 }
+            polar_joint5: { p: 12000, d: 70, i: 0.01, i_clamp: 1 }
+            polar_joint6: { p: 7000, d: 50, i: 0.01, i_clamp: 1 }
+
+        constraints:
+            goal_time: 2.0
+
+        state_publish_rate: 25
+
+    polar_hand_controller:
+        type: effort_controllers/JointTrajectoryController
+        joints:
+            - polar_hand_joint1
+
+        gains:
+            polar_hand_joint1: { p: 5, d: 3.0, i: 0, i_clamp: 1 }
+
+        state_publish_rate: 25

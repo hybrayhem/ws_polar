@@ -1,0 +1,51 @@
+<launch>
+  <arg name="use_fake_joint" default="false"/>
+  <arg name="use_moveit" default="false"/>
+  <arg name="use_rviz" default="false"/>
+  <arg name="use_joy" default="false"/>
+  <arg name="use_action" default="false"/>
+  <arg name="intermittent" default="false"/>
+
+  <!-- Launch fake_joint_launch -->
+  <include if="$(arg use_fake_joint)"
+	   file="$(find fake_joint_launch)/launch/tra1.launch">
+    <arg name="use_rviz" value="false"/>
+  </include>
+
+  <!-- Launch MoveIt! (tra1 doen't have planning_execution.launch (it should have) -->
+  <!-- Load the URDF, SRDF and other .yaml configuration files on the param server -->
+  <include file="$(find tra1_moveit_config)/launch/planning_context.launch">
+    <arg name="load_robot_description" value="false"/>
+  </include>
+
+  <!-- Run the main MoveIt executable without trajectory execution -->
+  <include file="$(find tra1_moveit_config)/launch/move_group.launch">
+    <arg name="allow_trajectory_execution" value="true"/>
+    <arg name="fake_execution" value="false"/>
+    <arg name="info" value="true"/>
+  </include>
+
+  <!-- Launch rviz -->
+  <node if="$(arg use_rviz)" name="rviz" pkg="rviz" type="rviz" args="-d $(find jog_launch)/launch/jog.rviz"/>
+
+  <!-- Jog controllers -->
+  <rosparam command="load"
+	    file="$(find jog_launch)/config/tra1_jog.yaml"/>
+  <node name="jog_joint_node" pkg="jog_controller" type="jog_joint_node">
+    <param name="use_action" value="$(arg use_action)"/>
+    <param name="intermittent" value="$(arg intermittent)"/>
+  </node>
+    
+  <node name="jog_frame_node" pkg="jog_controller" type="jog_frame_node">
+    <param name="use_action" value="$(arg use_action)"/>
+    <param name="intermittent" value="$(arg intermittent)"/>
+  </node>
+
+  <!-- Launch joypad -->
+  <include if="$(arg use_joy)" file="$(find jog_controller)/launch/joypad.launch">
+    <arg name="group_name" value="manipulator"/>
+    <arg name="frame_id" value="base_link"/>
+    <arg name="link_name" value="link_j6"/>
+  </include>
+  
+</launch>

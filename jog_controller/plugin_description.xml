@@ -1,0 +1,19 @@
+<library path="lib/libjog_controller">
+  
+  <class name="jog_controller/JogFramePanel"
+         type="jog_controller::JogFramePanel"
+         base_class_type="rviz::Panel">
+    <description>
+      A panel widget for frame jog interface
+    </description>
+  </class>
+
+  <class name="jog_controller/JogJointPanel"
+         type="jog_controller::JogJointPanel"
+         base_class_type="rviz::Panel">
+    <description>
+      A panel widget for joint jog interface
+    </description>
+  </class>
+
+</library>

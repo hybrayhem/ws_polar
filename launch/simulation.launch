@@ -31,13 +31,19 @@
     <!-- convert joint states to TF transforms for rviz, etc -->
     <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="true" output="screen" />
 
+    <!-- planning_context already launching in move_group -->
     <include file="$(find polar_moveit_config)/launch/planning_context.launch">
         <arg name="load_robot_description" value="true" />
     </include>
+
     <include file="$(find polar_moveit_config)/launch/move_group.launch">
     </include>
-    <group if="$(arg gui)">
-        <include file="$(find polar_moveit_config)/launch/moveit_rviz.launch" />
+
+    <group if="$(arg gui)">  
+        <!-- Run Rviz and load the default config to see the state of the move_group node -->
+        <include file="$(find polar_moveit_config)/launch/moveit_rviz.launch">
+            <arg name="rviz_config" value="$(find polar_moveit_config)/launch/moveit.rviz"/>
+        </include>
     </group>
 
     <node name="joint_state_desired_publisher" pkg="topic_tools" type="relay" args="joint_states joint_states_desired" />

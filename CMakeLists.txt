@@ -19,6 +19,12 @@ find_package(catkin REQUIRED COMPONENTS
   std_msgs
   tf
   xacro
+  # moveit_core
+  # moveit_visual_tools
+  # moveit_ros_planning
+  # moveit_ros_planning_interface
+  # controller_interface
+  # hardware_interface
 )
 
 ## System dependencies are found with CMake's conventions
@@ -115,6 +121,15 @@ catkin_package(
 #  LIBRARIES polar_simulation
 #  CATKIN_DEPENDS controller_manager effort_controllers gazebo_ros joint_state_controller joint_state_publisher joint_trajectory_controller robot_state_publisher roscpp std_msgs tf xacro
 #  DEPENDS system_lib
+                # CATKIN_DEPENDS
+                # moveit_core
+                # moveit_visual_tools
+                # moveit_ros_planning_interface
+                # controller_interface
+                # hardware_interface
+                # pluginlib
+                # DEPENDS
+                # system_lib
 )
 
 ###########

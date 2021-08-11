@@ -7,7 +7,8 @@
   <xacro:include filename="$(find polar_description)/robots/polar.gazebo.xacro"/>
   <xacro:include filename="$(find polar_description)/robots/polar.transmission.xacro"/>
 
-  <xacro:polar_arm/>
+  <link name="world" />
+  <xacro:polar_arm xyz="0 0 0" rpy="0 0 0" connected_to="world"/>
   <xacro:hand ns="polar" rpy="${pi/2} 0 0" xyz="-0.00675 -0.00964 -0.06152" connected_to="polar_link6"/>
 
   <xacro:polar_gazebo robot_name="$(arg robot_name)" />

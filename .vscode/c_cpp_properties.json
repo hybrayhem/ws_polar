@@ -1,0 +1,22 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "",
+        "limitSymbolsToIncludedHeaders": true
+      },
+      "includePath": [
+        "/home/hybrayhem/ws_manipulation/devel/include/**",
+        "/opt/ros/melodic/include/**",
+        "/home/hybrayhem/ws_manipulation/src/aruco_ros/aruco/include/**",
+        "/home/hybrayhem/ws_manipulation/src/aruco_ros/aruco_ros/include/**",
+        "/home/hybrayhem/ws_manipulation/src/jog_control/jog_controller/include/**",
+        "/home/hybrayhem/ws_manipulation/src/polar_control/include/**",
+        "/home/hybrayhem/ws_manipulation/src/ros_control_boilerplate/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS"
+    }
+  ],
+  "version": 4
+}

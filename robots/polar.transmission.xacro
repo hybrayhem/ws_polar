@@ -3,11 +3,9 @@
     <xacro:macro name="polar_transmission" params="robot_name">
 
 
-        <!-- Load Gazebo lib and set the robot namespace -->
+        <!-- (from ur_gazebo)  -->
         <gazebo>
-            <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
-                <robotNamespace>/${robot_name}</robotNamespace>
-            </plugin>
+            <plugin name="ros_control" filename="libgazebo_ros_control.so"></plugin>
         </gazebo>
 
         <!-- Polar arm -->

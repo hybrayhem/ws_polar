@@ -19,9 +19,21 @@
   <arg name="jiggle_fraction" default="0.05" />
   <arg name="publish_monitored_planning_scene" default="true"/>
 
-  <arg name="capabilities" default=""/>
+  <!-- <arg name="capabilities" default=""/> -->
   <arg name="disable_capabilities" default=""/>
   <!-- load these non-default MoveGroup capabilities (space seperated) -->
+  <!-- (from ur3_moveit_config) -->
+  <arg name="capabilities" default="move_group/MoveGroupCartesianPathService
+				      move_group/MoveGroupExecuteTrajectoryAction
+				      move_group/MoveGroupKinematicsService
+				      move_group/MoveGroupMoveAction
+				      move_group/MoveGroupPickPlaceAction
+				      move_group/MoveGroupPlanService
+				      move_group/MoveGroupQueryPlannersService
+				      move_group/MoveGroupStateValidationService
+				      move_group/MoveGroupGetPlanningSceneService
+				      move_group/ClearOctomapService
+				      " />
   <!--
   <arg name="capabilities" value="
                 a_package/AwsomeMotionPlanningCapability

@@ -1,28 +1,29 @@
 jog_joint_node:
   joint_names:
-    - shoulder_pan_joint
-    - shoulder_lift_joint
-    - elbow_joint
-    - wrist_1_joint
-    - wrist_2_joint
-    - wrist_3_joint
+    - polar_joint1
+    - polar_joint2
+    - polar_joint3
+    - polar_joint4
+    - polar_joint5
+    - polar_joint6
 
 jog_frame_node:
   group_names:
-    - manipulator
+    - polar_arm
   link_names:
-    - ee_link
+    - polar_hand
+#polar_link6
 
 # Somehow, UR5 moveit doesn't have controller name, so specify here
 move_group:
   controller_list:
-    - name: arm_controller
+    - name: polar_arm_controller
       action_ns: follow_joint_trajectory
       type: FollowJointTrajectory
       joints:
-        - shoulder_pan_joint
-        - shoulder_lift_joint
-        - elbow_joint
-        - wrist_1_joint
-        - wrist_2_joint
-        - wrist_3_joint
+        - polar_joint1
+        - polar_joint2
+        - polar_joint3
+        - polar_joint4
+        - polar_joint5
+        - polar_joint6

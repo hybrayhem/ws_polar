@@ -1,0 +1,71 @@
+# ros_control_boilerplate Settings -----------------------
+# Settings for ros_control control loop
+
+generic_hw_control_loop:
+  loop_hz: 50
+  cycle_time_error_threshold: 0.01
+
+# Settings for ros_control hardware interface (used in generic_hw_interface.cpp)
+hardware_interface:
+   joints:
+      - polar_joint1
+      - polar_joint2
+      - polar_joint3
+      - polar_joint4
+      - polar_joint5
+      - polar_joint6
+      - polar_hand_joint1
+
+
+# Publish all joint states ----------------------------------
+# Creates the /joint_states topic necessary in ROS
+joint_state_controller:
+   type: joint_state_controller/JointStateController
+   publish_rate: 200
+
+# Joint Trajectory Controller -------------------------------
+# For detailed explanations of parameter see http://wiki.ros.org/joint_trajectory_controller
+polar_arm_controller:
+   type: position_controllers/JointTrajectoryController
+   # These joints can likely just be copied from the hardware_interface list above
+   joints:
+      - polar_joint1
+      - polar_joint2
+      - polar_joint3
+      - polar_joint4
+      - polar_joint5
+      - polar_joint6
+   constraints:
+       goal_time: 0.6
+       stopped_velocity_tolerance: 0.05
+       polar_joint1: {trajectory: 0.1, goal: 0.1}
+       polar_joint2: {trajectory: 0.1, goal: 0.1}
+       polar_joint3: {trajectory: 0.1, goal: 0.1}
+       polar_joint4: {trajectory: 0.1, goal: 0.1}
+       polar_joint5: {trajectory: 0.1, goal: 0.1}
+       polar_joint6: {trajectory: 0.1, goal: 0.1}
+   stop_trajectory_duration: 0.5
+   state_publish_rate:  25
+   action_monitor_rate: 10
+
+polar_hand_controller:
+   type: position_controllers/JointTrajectoryController
+   joints:
+      - polar_hand_joint1
+   constraints:
+       goal_time: 0.6
+       stopped_velocity_tolerance: 0.05
+       polar_hand_joint1: {trajectory: 0.1, goal: 0.1}
+   stop_trajectory_duration: 0.5
+   state_publish_rate:  25
+   action_monitor_rate: 10
+
+joint_group_position_controller:
+  type: position_controllers/JointGroupPositionController
+  joints:
+     - polar_joint1
+     - polar_joint2
+     - polar_joint3
+     - polar_joint4
+     - polar_joint5
+     - polar_joint6

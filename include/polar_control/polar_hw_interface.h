@@ -3,12 +3,25 @@
 
 #include <ros_control_boilerplate/generic_hw_interface.h>
 #include <polar_control/PolarCommand.h>
+#include <serial/serial.h>
 
 // #define DEG_TO_RAD 0.01745329251
 // #define RAD_TO_DEG 57.2957795131
 
 namespace polar_control_ns
 {
+
+struct polar_joints
+{
+    float polar_joint1;
+    float polar_joint2;
+    float polar_joint3;
+    float polar_joint4;
+    float polar_joint5;
+    float polar_joint6;
+    float polar_hand_joint1;
+};
+
 /** \brief Hardware interface for a robot */
 class PolarHWInterface : public ros_control_boilerplate::GenericHWInterface
 {
@@ -32,11 +45,8 @@ public:
   virtual void enforceLimits(ros::Duration& period);
 
 protected:
-
-  ros::Subscriber joint_subscriber;
-  void jointSubscriberCallback(const polar_control::PolarCommand::ConstPtr &msg);
-
-  ros::Publisher joint_publisher;
+  serial::Serial ser;
+  ros::Publisher state_pub;
 };  // class
 
 }  // namespace ros_control_boilerplate

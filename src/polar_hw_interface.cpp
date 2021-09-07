@@ -5,6 +5,10 @@ namespace polar_control_ns
 PolarHWInterface::PolarHWInterface(ros::NodeHandle& nh, urdf::Model* urdf_model)
   : ros_control_boilerplate::GenericHWInterface(nh, urdf_model)
 {
+  joint2_offset = 0.3813; // -
+  joint3_offset = -0.3951; // +
+  joint5_offset = 0;//-0.3333; // -
+
   state_pub = nh.advertise<polar_control::PolarCommand>("/polar_control/write", 1);
   ROS_INFO("PolarHWInterface constructed.");
 }
@@ -53,10 +57,10 @@ void PolarHWInterface::read(ros::Duration& elapsed_time)
   //ser.read((uint8_t*) &state, sizeof(struct polar_joints))
   if (ser.read((uint8_t*) &state, sizeof(struct polar_joints) ) == sizeof(struct polar_joints)){
   joint_position_[0] = state.polar_joint1;
-  joint_position_[1] = state.polar_joint2;
-  joint_position_[2] = state.polar_joint3;
+  joint_position_[1] = state.polar_joint2 - joint2_offset;
+  joint_position_[2] = state.polar_joint3 - joint3_offset;
   joint_position_[3] = state.polar_joint4;
-  joint_position_[4] = state.polar_joint5;
+  joint_position_[4] = state.polar_joint5 - joint5_offset;
   joint_position_[5] = state.polar_joint6;
   joint_position_[6] = state.polar_hand_joint1;
   }
@@ -82,10 +86,10 @@ void PolarHWInterface::write(ros::Duration& elapsed_time)
 
   // Serial write
   cmd.polar_joint1 = joint_position_command_[0];
-  cmd.polar_joint2 = joint_position_command_[1];
-  cmd.polar_joint3 = joint_position_command_[2];
+  cmd.polar_joint2 = joint_position_command_[1] + joint2_offset;
+  cmd.polar_joint3 = joint_position_command_[2] + joint3_offset;
   cmd.polar_joint4 = joint_position_command_[3];
-  cmd.polar_joint5 = joint_position_command_[4];
+  cmd.polar_joint5 = joint_position_command_[4] + joint5_offset;
   cmd.polar_joint6 = joint_position_command_[5];
   cmd.polar_hand_joint1 = joint_position_command_[6];
   ser.write((const uint8_t*) &cmd, sizeof(struct polar_joints));

@@ -47,6 +47,11 @@ public:
 protected:
   serial::Serial ser;
   ros::Publisher state_pub;
+  
+  // offsets for changing home position and adapt embedded side
+  float joint2_offset;
+  float joint3_offset;
+  float joint5_offset;
 };  // class
 
 }  // namespace ros_control_boilerplate

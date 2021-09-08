@@ -25,6 +25,11 @@ find_package(catkin REQUIRED COMPONENTS
   # moveit_ros_planning_interface
   # controller_interface
   # hardware_interface
+  rosbridge_library
+  rosbridge_server
+  rosbridge_msgs
+  rosapi
+  tf2_web_republisher
 )
 
 ## System dependencies are found with CMake's conventions

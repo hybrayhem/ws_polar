@@ -83,6 +83,22 @@
   <exec_depend>tf</exec_depend>
   <exec_depend>xacro</exec_depend>
 
+  <build_depend>rosbridge_library</build_depend>
+  <build_depend>rosbridge_server</build_depend>
+  <build_depend>rosbridge_msgs</build_depend>
+  <build_depend>rosapi</build_depend>
+  <build_depend>tf2_web_republisher</build_depend>
+  <build_export_depend>rosbridge_library</build_export_depend>
+  <build_export_depend>rosbridge_server</build_export_depend>
+  <build_export_depend>rosbridge_msgs</build_export_depend>
+  <build_export_depend>rosapi</build_export_depend>
+  <build_export_depend>tf2_web_republisher</build_export_depend>
+  <exec_depend>rosbridge_library</exec_depend>
+  <exec_depend>rosbridge_server</exec_depend>
+  <exec_depend>rosbridge_msgs</exec_depend>
+  <exec_depend>rosapi</exec_depend>
+  <exec_depend>tf2_web_republisher</exec_depend>
+
 
   <!-- The export tag contains other, unspecified, tags -->
   <export>

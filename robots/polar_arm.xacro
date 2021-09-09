@@ -174,11 +174,11 @@
     </link>
     <joint name="${arm_id}_joint5" type="revolute">
       <safety_controller k_position="${safety_k_position}" k_velocity="${safety_k_velocity}" soft_lower_limit="${-3.6530 + safety_pos_margin}" soft_upper_limit="${0 - safety_pos_margin}"/>
-      <origin rpy="0.3333 0 0" xyz="0.0007 -0.1515 0.0"/>
+      <origin rpy="0.3333 0 0" xyz="0.0007 -0.1515 0.0"/> <!-- -1 derece -->
       <parent link="${arm_id}_link4"/>
       <child link="${arm_id}_link5"/>
       <axis xyz="1.0 0.0048 0.0048"/>
-      <limit effort="100" lower="-3.6530" upper="0" velocity="0.1626"/>
+      <limit effort="100" lower="-3.6530" upper="0" velocity="0.1626"/> <!-- lower +1 derece -->
       <dynamics damping="${joint_damping}" friction="${joint_friction}"/>
     </joint>
 

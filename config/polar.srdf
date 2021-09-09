@@ -38,8 +38,9 @@
     <!--VIRTUAL JOINT: Purpose: this element defines a virtual joint between a robot link and an external frame of reference (considered fixed with respect to the robot)-->
     <virtual_joint name="virtual_joint" type="fixed" parent_frame="world" child_link="polar_link0" />
     <!--DISABLE COLLISIONS: By default it is assumed that any link of the robot could potentially come into collision with any other link in the robot. This tag disables collision checking between a specified pair of links. -->
-    <disable_collisions link1="polar_finger_l" link2="polar_finger_r" reason="Never" />
+    <disable_collisions link1="polar_finger_l" link2="polar_finger_r" reason="Default" />
     <disable_collisions link1="polar_finger_l" link2="polar_hand" reason="Never" />
+    <disable_collisions link1="polar_finger_l" link2="polar_link2" reason="Never" />
     <disable_collisions link1="polar_finger_l" link2="polar_link3" reason="Never" />
     <disable_collisions link1="polar_finger_l" link2="polar_link4" reason="Never" />
     <disable_collisions link1="polar_finger_l" link2="polar_link5" reason="Never" />
@@ -47,12 +48,14 @@
     <disable_collisions link1="polar_finger_l" link2="polar_outer_l" reason="Adjacent" />
     <disable_collisions link1="polar_finger_l" link2="polar_outer_r" reason="Never" />
     <disable_collisions link1="polar_finger_r" link2="polar_hand" reason="Never" />
+    <disable_collisions link1="polar_finger_r" link2="polar_link2" reason="Never" />
     <disable_collisions link1="polar_finger_r" link2="polar_link3" reason="Never" />
     <disable_collisions link1="polar_finger_r" link2="polar_link4" reason="Never" />
     <disable_collisions link1="polar_finger_r" link2="polar_link5" reason="Never" />
     <disable_collisions link1="polar_finger_r" link2="polar_link6" reason="Never" />
     <disable_collisions link1="polar_finger_r" link2="polar_outer_l" reason="Never" />
     <disable_collisions link1="polar_finger_r" link2="polar_outer_r" reason="Adjacent" />
+    <disable_collisions link1="polar_hand" link2="polar_link1" reason="Never" />
     <disable_collisions link1="polar_hand" link2="polar_link2" reason="Never" />
     <disable_collisions link1="polar_hand" link2="polar_link3" reason="Never" />
     <disable_collisions link1="polar_hand" link2="polar_link4" reason="Never" />
@@ -62,15 +65,13 @@
     <disable_collisions link1="polar_hand" link2="polar_outer_r" reason="Adjacent" />
     <disable_collisions link1="polar_link0" link2="polar_link1" reason="Adjacent" />
     <disable_collisions link1="polar_link0" link2="polar_link2" reason="Never" />
-    <disable_collisions link1="polar_link0" link2="polar_link3" reason="Never" />
-    <disable_collisions link1="polar_link0" link2="polar_link4" reason="Never" />
-    <disable_collisions link1="polar_link0" link2="polar_link5" reason="Never" />
-    <disable_collisions link1="polar_link0" link2="polar_link6" reason="Never" />
     <disable_collisions link1="polar_link1" link2="polar_link2" reason="Adjacent" />
     <disable_collisions link1="polar_link1" link2="polar_link3" reason="Never" />
     <disable_collisions link1="polar_link1" link2="polar_link4" reason="Never" />
     <disable_collisions link1="polar_link1" link2="polar_link5" reason="Never" />
     <disable_collisions link1="polar_link1" link2="polar_link6" reason="Never" />
+    <disable_collisions link1="polar_link1" link2="polar_outer_l" reason="Never" />
+    <disable_collisions link1="polar_link1" link2="polar_outer_r" reason="Never" />
     <disable_collisions link1="polar_link2" link2="polar_link3" reason="Adjacent" />
     <disable_collisions link1="polar_link2" link2="polar_link4" reason="Never" />
     <disable_collisions link1="polar_link2" link2="polar_link5" reason="Never" />

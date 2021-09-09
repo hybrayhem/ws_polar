@@ -3,52 +3,52 @@
 # Joint limits can be turned off with [has_velocity_limits, has_acceleration_limits]
 joint_limits:
   polar_finger_joint1:
-    has_velocity_limits: false
-    max_velocity: 0
+    has_velocity_limits: true
+    max_velocity: 6.5449
     has_acceleration_limits: false
     max_acceleration: 0
   polar_finger_joint2:
-    has_velocity_limits: false
-    max_velocity: 0
+    has_velocity_limits: true
+    max_velocity: 6.5449
     has_acceleration_limits: false
     max_acceleration: 0
   polar_hand_joint1:
     has_velocity_limits: true
-    max_velocity: 100
+    max_velocity: 6.5449
     has_acceleration_limits: false
     max_acceleration: 0
   polar_hand_joint2:
-    has_velocity_limits: false
-    max_velocity: 0
+    has_velocity_limits: true
+    max_velocity: 6.5449
     has_acceleration_limits: false
     max_acceleration: 0
   polar_joint1:
     has_velocity_limits: true
-    max_velocity: 2.175
+    max_velocity: 0.1286
     has_acceleration_limits: false
     max_acceleration: 0
   polar_joint2:
     has_velocity_limits: true
-    max_velocity: 2.175
+    max_velocity: 0.1071
     has_acceleration_limits: false
     max_acceleration: 0
   polar_joint3:
     has_velocity_limits: true
-    max_velocity: 2.175
+    max_velocity: 0.06370000000000001
     has_acceleration_limits: false
     max_acceleration: 0
   polar_joint4:
     has_velocity_limits: true
-    max_velocity: 2.175
+    max_velocity: 0.8722
     has_acceleration_limits: false
     max_acceleration: 0
   polar_joint5:
     has_velocity_limits: true
-    max_velocity: 2.61
+    max_velocity: 0.1626
     has_acceleration_limits: false
     max_acceleration: 0
   polar_joint6:
     has_velocity_limits: true
-    max_velocity: 2.61
+    max_velocity: 0.8845
     has_acceleration_limits: false
     max_acceleration: 0

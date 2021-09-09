@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="panel_description">
+  <link name="world" />
+  <joint name="robot_to_world" type="fixed">
+    <parent link="world" />
+    <child link="base_link" />
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+  </joint>
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.120445617783178 -0.475294055521823 0.700175639695844"
+        rpy="0 0 0" />
+      <mass
+        value="3.11093437641292" />
+      <inertia
+        ixx="0.034937849971517"
+        ixy="2.85506869834046E-06"
+        ixz="-2.60912308613401E-08"
+        iyy="0.0469707915915287"
+        iyz="-2.87082157479153E-07"
+        izz="0.0132131791743923" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://panel_description/meshes/base_link.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://panel_description/meshes/base_link.dae" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="button1">
+    <inertial>
+      <origin
+        xyz="-0.014545 1.8088E-06 -0.0049577"
+        rpy="0 0 0" />
+      <mass
+        value="0.016063" />
+      <inertia
+        ixx="3.8235E-06"
+        ixy="3.0387E-11"
+        ixz="-1.4334E-13"
+        iyy="1.282E-06"
+        iyz="1.136E-10"
+        izz="4.807E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://panel_description/meshes/anahtar1.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://panel_description/meshes/anahtar1.dae" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="btn1_joint"
+    type="revolute">
+    <origin
+      xyz="0.050549 -0.46007 0.78221"
+      rpy="1.5239 0 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="button1" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-0.12"
+      upper="0.18"
+      effort="0"
+      velocity="0" />
+    <dynamics
+      friction="0.2" />
+  </joint>
+  <link
+    name="button2">
+    <inertial>
+      <origin
+        xyz="-0.014545 1.8088E-06 -0.0049577"
+        rpy="0 0 0" />
+      <mass
+        value="0.016063" />
+      <inertia
+        ixx="3.8235E-06"
+        ixy="3.0387E-11"
+        ixz="-1.4334E-13"
+        iyy="1.282E-06"
+        iyz="1.136E-10"
+        izz="4.807E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://panel_description/meshes/anahtar2.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://panel_description/meshes/anahtar2.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="btn2_joint"
+    type="revolute">
+    <origin
+      xyz="0.079639 -0.46007 0.78221"
+      rpy="1.5239 0 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="button2" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-0.12"
+      upper="0.18"
+      effort="0"
+      velocity="0" />
+    <dynamics
+      friction="0.2" />
+  </joint>
+  <link
+    name="button3">
+    <inertial>
+      <origin
+        xyz="-0.014545 1.8088E-06 -0.0049577"
+        rpy="0 0 0" />
+      <mass
+        value="0.016063" />
+      <inertia
+        ixx="3.8235E-06"
+        ixy="3.0387E-11"
+        ixz="-1.4334E-13"
+        iyy="1.282E-06"
+        iyz="1.136E-10"
+        izz="4.807E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://panel_description/meshes/anahtar3.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://panel_description/meshes/anahtar3.dae" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="btn3_joint"
+    type="revolute">
+    <origin
+      xyz="0.130549 -0.46007 0.78221"
+      rpy="1.5239 0 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="button3" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-0.12"
+      upper="0.18"
+      effort="0"
+      velocity="0" />
+    <dynamics
+      friction="0.2" />
+  </joint>
+  <link
+    name="button4">
+    <inertial>
+      <origin
+        xyz="-0.014545 1.8088E-06 -0.0049577"
+        rpy="0 0 0" />
+      <mass
+        value="0.016063" />
+      <inertia
+        ixx="3.8235E-06"
+        ixy="3.0387E-11"
+        ixz="-1.4334E-13"
+        iyy="1.282E-06"
+        iyz="1.136E-10"
+        izz="4.807E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://panel_description/meshes/anahtar4.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://panel_description/meshes/anahtar4.dae" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="btn4_joint"
+    type="revolute">
+    <origin
+      xyz="0.159639 -0.46007 0.78221"
+      rpy="1.5239 0 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="button4" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-0.12"
+      upper="0.18"
+      effort="0"
+      velocity="0" />
+    <dynamics
+      friction="0.2" />
+  </joint>
+  <link
+    name="button5">
+    <inertial>
+      <origin
+        xyz="-0.014545 1.8088E-06 -0.0049577"
+        rpy="0 0 0" />
+      <mass
+        value="0.016063" />
+      <inertia
+        ixx="3.8235E-06"
+        ixy="3.0387E-11"
+        ixz="-1.4334E-13"
+        iyy="1.282E-06"
+        iyz="1.136E-10"
+        izz="4.807E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://panel_description/meshes/anahtar5.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://panel_description/meshes/anahtar5.dae" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="btn5_joint"
+    type="revolute">
+    <origin
+      xyz="0.050549 -0.46007 0.62221"
+      rpy="1.5239 0 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="button5" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-0.12"
+      upper="0.18"
+      effort="0"
+      velocity="0" />
+    <dynamics
+      friction="0.2" />
+  </joint>
+  <link
+    name="button6">
+    <inertial>
+      <origin
+        xyz="-0.014545 1.8088E-06 -0.0049577"
+        rpy="0 0 0" />
+      <mass
+        value="0.016063" />
+      <inertia
+        ixx="3.8235E-06"
+        ixy="3.0387E-11"
+        ixz="-1.4334E-13"
+        iyy="1.282E-06"
+        iyz="1.136E-10"
+        izz="4.807E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://panel_description/meshes/anahtar6.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://panel_description/meshes/anahtar6.dae" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="btn6_joint"
+    type="revolute">
+    <origin
+      xyz="0.079639 -0.46007 0.62221"
+      rpy="1.5239 0 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="button6" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-0.12"
+      upper="0.18"
+      effort="0"
+      velocity="0" />
+    <dynamics
+      friction="0.2" />
+  </joint>
+  <link
+    name="button7">
+    <inertial>
+      <origin
+        xyz="-0.014545 1.8088E-06 -0.0049577"
+        rpy="0 0 0" />
+      <mass
+        value="0.016063" />
+      <inertia
+        ixx="3.8235E-06"
+        ixy="3.0387E-11"
+        ixz="-1.4334E-13"
+        iyy="1.282E-06"
+        iyz="1.136E-10"
+        izz="4.807E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://panel_description/meshes/anahtar7.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://panel_description/meshes/anahtar7.dae" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="btn7_joint"
+    type="revolute">
+    <origin
+      xyz="0.130549 -0.46007 0.62221"
+      rpy="1.5239 0 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="button7" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-0.12"
+      upper="0.18"
+      effort="0"
+      velocity="0" />
+    <dynamics
+      friction="0.2" />
+  </joint>
+  <link
+    name="button8">
+    <inertial>
+      <origin
+        xyz="-0.014545 1.8088E-06 -0.0049577"
+        rpy="0 0 0" />
+      <mass
+        value="0.016063" />
+      <inertia
+        ixx="3.8235E-06"
+        ixy="3.0387E-11"
+        ixz="-1.4334E-13"
+        iyy="1.282E-06"
+        iyz="1.136E-10"
+        izz="4.807E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://panel_description/meshes/anahtar8.dae" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://panel_description/meshes/anahtar8.dae" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="btn8_joint"
+    type="revolute">
+    <origin
+      xyz="0.159639 -0.46007 0.62221"
+      rpy="1.5239 0 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="button8" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-0.12"
+      upper="0.18"
+      effort="0"
+      velocity="0" />
+    <dynamics
+      friction="0.2" />
+  </joint>
+  <!-- <link
+    name="anahtar2">
+    <inertial>
+      <origin
+        xyz="0.12045 -0.47529 0.70018"
+        rpy="0 0 0" />
+      <mass
+        value="3.1109" />
+      <inertia
+        ixx="0.034938"
+        ixy="2.8551E-06"
+        ixz="-2.6091E-08"
+        iyy="0.046971"
+        iyz="-2.8708E-07"
+        izz="0.013213" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://panel_description/meshes/anahtar2.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://panel_description/meshes/anahtar2.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="anahtar2"
+    type="revolute">
+    <origin
+      xyz="0.079641 -0.46007 0.78221"
+      rpy="1.5239 0 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="anahtar2" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-0.12"
+      upper="0.18"
+      effort="0"
+      velocity="0" />
+    <dynamics
+      friction="0.2" />
+  </joint> -->
+</robot>

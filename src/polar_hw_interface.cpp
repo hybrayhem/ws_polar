@@ -13,6 +13,10 @@ PolarHWInterface::PolarHWInterface(ros::NodeHandle& nh, urdf::Model* urdf_model)
   ROS_INFO("PolarHWInterface constructed.");
 }
 
+long PolarHWInterface::map(float x, float in_min, float in_max, float out_min, float out_max) {
+  return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
+}
+
 void PolarHWInterface::init()
 {
   // Call parent class version of this function
@@ -62,7 +66,8 @@ void PolarHWInterface::read(ros::Duration& elapsed_time)
   joint_position_[3] = state.polar_joint4;
   joint_position_[4] = state.polar_joint5 - joint5_offset;
   joint_position_[5] = state.polar_joint6;
-  joint_position_[6] = state.polar_hand_joint1;
+  joint_position_[6] = -map(state.polar_hand_joint1, 34, 70, 0, 1.0472);
+  // joint_position_[6] = -60;
   }
   
 }
@@ -91,7 +96,8 @@ void PolarHWInterface::write(ros::Duration& elapsed_time)
   cmd.polar_joint4 = joint_position_command_[3];
   cmd.polar_joint5 = joint_position_command_[4] + joint5_offset;
   cmd.polar_joint6 = joint_position_command_[5];
-  cmd.polar_hand_joint1 = joint_position_command_[6];
+  cmd.polar_hand_joint1 = map(-joint_position_command_[6], 0, 1.0472, 34, 70);
+  // cmd.polar_hand_joint1 = 70;
   ser.write((const uint8_t*) &cmd, sizeof(struct polar_joints));
 
 }

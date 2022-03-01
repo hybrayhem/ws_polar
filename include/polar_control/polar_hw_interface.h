@@ -45,6 +45,8 @@ public:
   virtual void enforceLimits(ros::Duration& period);
 
 protected:
+  long map(float x, float in_min, float in_max, float out_min, float out_max);
+
   serial::Serial ser;
   ros::Publisher state_pub;
   

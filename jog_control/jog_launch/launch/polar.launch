@@ -1,0 +1,41 @@
+<launch>
+  <!-- <arg name="use_fake_joint" default="false"/> -->
+  <arg name="use_moveit" default="false"/>
+  <arg name="use_rviz" default="false"/>
+  <arg name="use_joy" default="false"/>
+
+  <!-- Launch fake_joint_driver -->
+  <!-- <include if="$(arg use_fake_joint)"
+	   file="$(find fake_joint_launch)/launch/polar.launch">
+    <arg name="use_rviz" value="false"/>
+  </include> -->
+
+  <!-- Launch MoveIt! -->
+  <!-- <include if="$(arg use_moveit)" file="$(find ur3_moveit_config)/launch/ur3_moveit_planning_execution.launch"/> -->
+  <!-- Run the main MoveIt! executable without trajectory execution (we do not have controllers configured by default) -->
+  <include if="$(arg use_moveit)" file="$(find polar_moveit_config)/launch/move_group.launch">
+    <!-- <arg name="allow_trajectory_execution" value="true"/>
+    <arg name="fake_execution" value="true"/>
+    <arg name="info" value="true"/>
+    <arg name="debug" value="false"/>
+    <arg name="pipeline" value="ompl"/> -->
+    <arg name="load_robot_description" value="false"/>
+  </include>
+  
+  <!-- Launch rviz -->
+  <node if="$(arg use_rviz)"
+	name="rviz" pkg="rviz" type="rviz"
+	args="-d $(find jog_launch)/launch/jog.rviz"/>
+
+  <rosparam command="load" file="$(find jog_launch)/config/polar.yaml"/>
+  <node name="jog_joint_node" pkg="jog_controller" type="jog_joint_node"/>
+  <node name="jog_frame_node" pkg="jog_controller" type="jog_frame_node"/>
+
+  <!-- Launch joypad -->
+  <include if="$(arg use_joy)" file="$(find jog_controller)/launch/joypad.launch">
+    <arg name="group_name" value="polar_arm"/>
+    <arg name="frame_id" value="polar_link0"/>
+    <arg name="link_name" value="polar_link6"/>
+  </include>
+
+</launch>

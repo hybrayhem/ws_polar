@@ -1,0 +1,29 @@
+jog_joint_node:
+  joint_names:
+    - polar_joint1
+    - polar_joint2
+    - polar_joint3
+    - polar_joint4
+    - polar_joint5
+    - polar_joint6
+
+jog_frame_node:
+  group_names:
+    - polar_arm
+  link_names:
+    - polar_hand
+#polar_link6
+
+# Somehow, UR5 moveit doesn't have controller name, so specify here
+move_group:
+  controller_list:
+    - name: polar_arm_controller
+      action_ns: follow_joint_trajectory
+      type: FollowJointTrajectory
+      joints:
+        - polar_joint1
+        - polar_joint2
+        - polar_joint3
+        - polar_joint4
+        - polar_joint5
+        - polar_joint6

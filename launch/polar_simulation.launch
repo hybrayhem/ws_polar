@@ -24,6 +24,16 @@
     <arg name="rviz_config" value="$(find polar_moveit_config)/launch/moveit.rviz"/>
   </include>
 
+  <!-- spawn panel -->
+  <include file = "$(find panel_description)/launch/gazebo.launch">
+    <arg name="x"    default="-0.075"/> 
+    <arg name="y"    default="-1.0"/> 
+    <arg name="z"    default="+0.32"/> 
+    <arg name="roll"    default="0"/> 
+    <arg name="pitch"    default="0"/> 
+    <arg name="yaw"    default="3.14"/> 
+  </include>
+
   <!-- for web interface -->
   <include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch">
       <arg name="port" value="9090" />

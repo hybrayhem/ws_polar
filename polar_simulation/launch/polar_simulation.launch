@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="sim" default="true" />
+
+  <!-- gazebo -->
+  <include file="$(find polar_gazebo)/launch/polar.launch"></include>
+
+  <!-- moveit -->
+  <!-- Remap follow_joint_trajectory -->
+  <remap if="$(arg sim)" from="/follow_joint_trajectory" to="/polar_arm_controller/follow_joint_trajectory"/>
+  
+  <!-- Launch moveit -->
+  <include file="$(find polar_moveit_config)/launch/move_group.launch">
+    <!-- <arg name="allow_trajectory_execution" value="true"/> -->
+    <!-- <arg name="fake_execution" value="false"/> -->
+    <!-- <arg name="info" value="true"/> -->
+    <!-- <arg name="debug" value="false"/> -->
+    <!-- <arg name="pipeline" value="$(arg pipeline)"/> -->
+    <arg name="load_robot_description" value="false"/>
+  </include>
+
+  <!-- rviz -->
+  <include file="$(find polar_moveit_config)/launch/moveit_rviz.launch">
+    <arg name="rviz_config" value="$(find polar_moveit_config)/launch/moveit.rviz"/>
+  </include>
+
+  <!-- spawn panel -->
+  <include file = "$(find panel_description)/launch/gazebo.launch">
+    <arg name="x"    default="-0.075"/> 
+    <arg name="y"    default="-1.0"/> 
+    <arg name="z"    default="+0.32"/> 
+    <arg name="roll"    default="0"/> 
+    <arg name="pitch"    default="0"/> 
+    <arg name="yaw"    default="3.14"/> 
+  </include>
+
+  <!-- for web interface -->
+  <include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch">
+      <arg name="port" value="9090" />
+  </include>
+
+  <node pkg="tf2_web_republisher" type="tf2_web_republisher" name="tf2_web_republisher" />
+
+</launch>
+

@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<launch>
+
+
+
+  <!-- send robot urdf to param server -->
+  <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find polar_description)/robots/polar_arm_hand.urdf.xacro'" />
+
+  <!-- Robot state publisher -->
+  <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" >
+    <!-- <param name="publish_frequency" type="double" value="50.0" /> -->
+  </node>
+
+
+
+<!-- CORE  -->
+
+  <!-- Load controllers -->
+  <rosparam file="$(find polar_control)/config/polar_hw_controllers.yaml" command="load"/>
+
+  <!-- Load hardware interface -->
+  <node name="polar_hw_main" pkg="polar_control" type="polar_hw_main" output="screen"/>
+
+  <node name="ros_control_controller_manager" pkg="controller_manager" type="controller_manager" respawn="false"
+  output="screen" args="spawn joint_state_controller polar_arm_controller polar_hand_controller" />
+
+
+
+ <!-- MOVEIT -->
+
+  <remap from="/follow_joint_trajectory" to="/polar_arm_controller/follow_joint_trajectory"/>
+  
+  <!-- Launch moveit -->
+  <include file="$(find polar_moveit_config)/launch/move_group.launch">
+    <arg name="allow_trajectory_execution" value="true"/>
+    <arg name="fake_execution" value="false"/>
+    <!-- <arg name="info" value="true"/> -->
+    <!-- <arg name="debug" value="false"/> -->
+    <!-- <arg name="pipeline" value="$(arg pipeline)"/> -->
+    <arg name="load_robot_description" value="true"/>
+  </include>
+
+  <!-- rviz -->
+  <include file="$(find polar_moveit_config)/launch/moveit_rviz.launch">
+    <arg name="rviz_config" value="$(find polar_moveit_config)/launch/moveit.rviz"/>
+  </include>
+
+
+</launch>

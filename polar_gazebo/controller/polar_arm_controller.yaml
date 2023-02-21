@@ -1,0 +1,31 @@
+polar_arm_controller:
+  type: position_controllers/JointTrajectoryController
+  joints:
+     - polar_joint1
+     - polar_joint2
+     - polar_joint3
+     - polar_joint4
+     - polar_joint5
+     - polar_joint6
+  constraints:
+      goal_time: 0.6
+      stopped_velocity_tolerance: 0.05
+      polar_joint1: {trajectory: 0.1, goal: 0.1}
+      polar_joint2: {trajectory: 0.1, goal: 0.1}
+      polar_joint3: {trajectory: 0.1, goal: 0.1}
+      polar_joint4: {trajectory: 0.1, goal: 0.1}
+      polar_joint5: {trajectory: 0.1, goal: 0.1}
+      polar_joint6: {trajectory: 0.1, goal: 0.1}
+  stop_trajectory_duration: 0.5
+  state_publish_rate:  25
+  action_monitor_rate: 10
+joint_group_position_controller:
+  type: position_controllers/JointGroupPositionController
+  joints:
+     - polar_joint1
+     - polar_joint2
+     - polar_joint3
+     - polar_joint4
+     - polar_joint5
+     - polar_joint6
+

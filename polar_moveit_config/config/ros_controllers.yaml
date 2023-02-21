@@ -1,0 +1,18 @@
+controller_list:
+  - name: ""
+    action_ns: follow_joint_trajectory
+    # default: True
+    type: FollowJointTrajectory
+    joints:
+      - polar_joint1
+      - polar_joint2
+      - polar_joint3
+      - polar_joint4
+      - polar_joint5
+      - polar_joint6
+  - name: "polar_hand_controller"
+    action_ns: follow_joint_trajectory
+    default: True
+    type: FollowJointTrajectory
+    joints:
+      - polar_hand_joint1

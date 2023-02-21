@@ -1,0 +1,54 @@
+# joint_limits.yaml allows the dynamics properties specified in the URDF to be overwritten or augmented as needed
+# Specific joint properties can be changed with the keys [max_position, min_position, max_velocity, max_acceleration]
+# Joint limits can be turned off with [has_velocity_limits, has_acceleration_limits]
+joint_limits:
+  polar_finger_joint1:
+    has_velocity_limits: true
+    max_velocity: 6.5449
+    has_acceleration_limits: false
+    max_acceleration: 0
+  polar_finger_joint2:
+    has_velocity_limits: true
+    max_velocity: 6.5449
+    has_acceleration_limits: false
+    max_acceleration: 0
+  polar_hand_joint1:
+    has_velocity_limits: true
+    max_velocity: 6.5449
+    has_acceleration_limits: false
+    max_acceleration: 0
+  polar_hand_joint2:
+    has_velocity_limits: true
+    max_velocity: 6.5449
+    has_acceleration_limits: false
+    max_acceleration: 0
+  polar_joint1:
+    has_velocity_limits: true
+    max_velocity: 0.1286
+    has_acceleration_limits: false
+    max_acceleration: 0
+  polar_joint2:
+    has_velocity_limits: true
+    max_velocity: 0.1071
+    has_acceleration_limits: false
+    max_acceleration: 0
+  polar_joint3:
+    has_velocity_limits: true
+    max_velocity: 0.06370000000000001
+    has_acceleration_limits: false
+    max_acceleration: 0
+  polar_joint4:
+    has_velocity_limits: true
+    max_velocity: 0.8722
+    has_acceleration_limits: false
+    max_acceleration: 0
+  polar_joint5:
+    has_velocity_limits: true
+    max_velocity: 0.1626
+    has_acceleration_limits: false
+    max_acceleration: 0
+  polar_joint6:
+    has_velocity_limits: true
+    max_velocity: 0.8845
+    has_acceleration_limits: false
+    max_acceleration: 0

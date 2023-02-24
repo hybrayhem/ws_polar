@@ -18,6 +18,7 @@ rosdep install -y --from-paths . --ignore-src --rosdistro melodic
 
 # Build
 cd ..
+catkin config --extend /opt/ros/${ROS_DISTRO} --cmake-args -DCMAKE_BUILD_TYPE=Release
 catkin build
 source devel/setup.bash
 ```

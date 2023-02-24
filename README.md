@@ -74,6 +74,7 @@ Physical joint limits(position, velocity, torque) needs to be measured after pro
 
 
 #### Resources
+* http://docs.ros.org/en/melodic/api/moveit_tutorials/html/doc/getting_started/getting_started.html
 * https://github.com/erdalpekel/panda_simulation
 * https://erdalpekel.de/
 * https://github.com/sgzuccaro/moveit_tutorials
